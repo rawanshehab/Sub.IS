@@ -85,7 +85,7 @@
 		$address = $_POST['address'];
 
 		mysqli_query($db, "INSERT INTO user_addresses (name, address) VALUES ('$name', '$address')"); 
-		$_SESSION['message'] = "Address saved"; 
+		$_SESSION['message'] = "Grade saved"; 
 		header('location: address.php');
 	}
 
@@ -96,14 +96,14 @@
 		$address = $_POST['address'];
 
 		mysqli_query($db, "UPDATE user_addresses SET name='$name', address='$address' WHERE id=$id");
-		$_SESSION['message'] = "Address updated!"; 
+		$_SESSION['message'] = "Grade updated!"; 
 		header('location: address.php');
 	}
 
 	if (isset($_GET['del'])) {
 		$id = $_GET['del'];
 		mysqli_query($db, "DELETE FROM user_addresses WHERE id=$id");
-		$_SESSION['message'] = "Address deleted!"; 
+		$_SESSION['message'] = "Grade deleted!"; 
 		header('location: address.php');
 	}
 
