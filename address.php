@@ -57,8 +57,8 @@ include('server.php');
 	<table>
 		<thead>
 			<tr>
-				<th>Name</th>
-				<th>Address</th>
+				<th>Student Name</th>
+				<th>Grade</th>
 				<?php if ($user_type == 'teacher') : ?>
 				<th colspan="2">Action</th>
 				<?php endif ?>	
@@ -94,7 +94,7 @@ include('server.php');
 			</div>
 
 			<div class="input-group">
-				<label>Address</label>
+				<label>Grade</label>
 				<input type="text" name="address" value="<?php echo $address ?>">
 			</div>
 			
@@ -111,5 +111,3 @@ include('server.php');
 
 </body>
 </html>
-
-
